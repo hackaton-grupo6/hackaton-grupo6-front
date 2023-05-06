@@ -1,11 +1,11 @@
 # build environment
 FROM node:14-alpine as react-build
 
-COPY package.json /app
+COPY ./frontend/package.json /app
 
 WORKDIR /app
 
-COPY . /app
+COPY ./frontend /app
 
 RUN yarn
 RUN yarn build
