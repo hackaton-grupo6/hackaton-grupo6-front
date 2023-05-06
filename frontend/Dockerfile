@@ -1,6 +1,8 @@
 # build environment
 FROM node:14-alpine as react-build
 
+COPY package.json /app
+
 WORKDIR /app
 
 COPY . /app
