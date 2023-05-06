@@ -1,9 +1,9 @@
 # build environment
 FROM node:14-alpine as react-build
 
-COPY ./frontend/package.json /app
-
 WORKDIR /app
+
+COPY ./frontend/package.json /app
 
 COPY ./frontend /app
 
