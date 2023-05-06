@@ -5,7 +5,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN yarn install --ignore-scripts
+RUN yarn
 RUN yarn build
 
 # server environment
