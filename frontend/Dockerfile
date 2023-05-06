@@ -6,18 +6,11 @@ USER nonroot
 
 WORKDIR /app
 
-COPY ./Dockerfile /app
 COPY ./nginx.conf /app
 COPY ./package-lock.json /app
 COPY ./package.json /app
 COPY ./public /app
 COPY ./src /app
-
-RUN addgroup -S nonroot \
-    && adduser -S nonroot -G nonroot
-
-USER nonroot
-
 
 RUN yarn install --ignore-scripts
 RUN yarn build
