@@ -6,7 +6,7 @@ function App() {
    	const [data, setData] = useState([]);
 
 	useEffect(() => {
-		fetch("$BACKEND_URL")
+		fetch("https://myapp-fiap-grupo06-backend-prod-66wi23zujq-uc.a.run.app")
 		 .then((res) => res.json())
       		 .then((result) => setData(result))
       		 .catch((err) => console.log("error"));
